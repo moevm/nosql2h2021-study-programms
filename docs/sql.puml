@@ -1,0 +1,23 @@
+@startuml
+
+entity "StudyProgramms" {
+	id: Int,
+	Title: String,
+	Faculty: String
+}
+
+entity "Subjects" {
+	id: Int,
+	Title: String,
+	Cafedre: String,
+	Semester: Int,
+	ScoreUnits: Int,
+	Theory: Int,
+	Practice: Int,
+	ControlForm: Enum
+	StudyProgrammId: Ind
+}
+
+Subjects ||--o{ StudyProgramms
+
+@enduml
