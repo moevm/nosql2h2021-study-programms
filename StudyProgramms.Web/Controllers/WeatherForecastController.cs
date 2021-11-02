@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace StudyProgramms.Web.Controllers
+namespace StudyProgramms.Web.Controller
 {
     [ApiController]
     [Route("[controller]")]
