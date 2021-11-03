@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using StudyProgramms.Data;
 using StudyProgramms.Data.Interfaces;
 using StudyProgramms.Data.Repositories;
 
@@ -53,7 +54,7 @@ namespace StudyProgramms.Web
 
         private void RegistreServices(IServiceCollection services)
         {
-            services.AddSingleton(sp => Configuration.GetConnectionString("MongoDb"));
+            services.AddSingleton(new MongoDbContext(Configuration.GetConnectionString("MongoDb")));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
     }
