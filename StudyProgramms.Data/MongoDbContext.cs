@@ -1,3 +1,6 @@
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Driver;
 
 namespace StudyProgramms.Data
@@ -11,6 +14,7 @@ namespace StudyProgramms.Data
             MongoUrl url = MongoUrl.Create(connectionString);
             MongoClient client = new(url);
             database = client.GetDatabase(url.DatabaseName);
+            BsonSerializer.RegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
         }
 
         public IMongoCollection<T> GetCollection<T>() =>
