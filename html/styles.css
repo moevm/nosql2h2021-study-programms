@@ -1,0 +1,117 @@
+body {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body.add-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    text-align: left;
+    padding: 20px;
+    background-color: #a8a8a8;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #151515;
+    margin-bottom: 3px;
+    font-size: 16px;
+    transition: .3s all ease-in-out;
+    height: auto;
+}
+
+.card:hover {
+    background-color: #939393;
+}
+
+.button {
+    padding: 10px;
+    background-color: #151515;
+    border-radius: 5%;
+    display: inline-block;
+    color: #d9d9d9;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #313131;
+}
+
+#add-btn {
+    margin: 10px;
+}
+
+
+.card-content {
+    font-size: 14px;
+    height: 0px;
+    transition: .5s height ease-in-out;
+    overflow: hidden;
+}
+
+.card-content .list {
+    margin-left: 20px;
+}
+
+.card-content .list .item {
+    margin-top: 10px;
+}
+
+.card-content .item-name {
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.card-content .item-params {
+    margin-left: 20px;
+}
+
+.card-content .item-params .param {
+    display: flex;
+}
+
+.card-content .item-params .param-name:after {
+    content: ':';
+}
+
+.card-content .item-params .param-value {
+    margin-left: 5px;
+}
+
+.input-block {
+    display: flex;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 150px;
+    font-size: 16px;
+}
+
+.input-name:after {
+    content: ':';
+}
+
+.discipline {
+    margin-top: 20px;
+    background-color: #a8a8a8;
+    padding: 20px;
+
+}
+
+.discipline-remove {
+    text-align: right;
+}
+
+.discipline .button {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.create {
+    margin-top: 20px;
+}
+
