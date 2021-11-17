@@ -1,5 +1,5 @@
-server = "localhost:5000"
-mode = "debug" // "release"
+server = "http://localhost:5000"
+mode = "release" // "release"
 
 function toggleCard(card) {
     let list = card.querySelector('.card-content');
