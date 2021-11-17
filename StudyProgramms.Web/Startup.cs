@@ -32,11 +32,6 @@ namespace StudyProgramms.Web
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseCors(builder => 
-            {
-                builder.AllowAnyOrigin();
-                builder.AllowAnyHeader();
-            });
 
             app.UseEndpoints(endpoints =>
             {
@@ -49,7 +44,6 @@ namespace StudyProgramms.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudyPrograms.Web", Version = "v1" });
