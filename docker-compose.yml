@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    ports:
+      - "5000:80"
+    links:
+      - "mongo"
+
+  frontend:
+    build: html
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  mongo:
+    image: mongo
+    restart: always

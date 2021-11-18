@@ -335,7 +335,7 @@ async function process_add_card() {
     
     if (result) {
         alert("Добавлена!");
-        document.location.href = "localhost";
+        document.location.href = "/";
     } else {
         alert("Произошла ошибка!");
     }
